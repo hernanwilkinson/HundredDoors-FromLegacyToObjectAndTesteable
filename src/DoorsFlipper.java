@@ -13,8 +13,8 @@ class DoorsFlipper {
     }
 
     private void flipEvery(int step) {
-        for (int j = step; j < doors.length; j += step) {
-            doors[j] = !doors[j];
+        for (int doorPosition = step; doorPosition < doors.length; doorPosition += step) {
+            doors[doorPosition] = !doors[doorPosition];
         }
     }
 }
