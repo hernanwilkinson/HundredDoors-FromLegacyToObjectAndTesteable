@@ -6,8 +6,8 @@ class DoorsFlipper {
     }
 
     public boolean[] flipAll() {
-        for (int i = 1; i < doors.length; i++) {
-            flipEvery(i);
+        for (int step = 1; step < doors.length; step++) {
+            flipEvery(step);
         }
         return doors;
     }
