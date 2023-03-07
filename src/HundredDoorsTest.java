@@ -9,7 +9,7 @@ public class HundredDoorsTest {
     @Test
     public void shouldOutputOpenedDoors() {
         final StringWriter out = new StringWriter();
-        HundredDoors.hundredDoors(new PrintWriter(out));
+        HundredDoors.hundredDoors(new PrintWriter(out), 100);
         assertEquals("Door 1 is open.\n" +
                 "Door 4 is open.\n" +
                 "Door 9 is open.\n" +
