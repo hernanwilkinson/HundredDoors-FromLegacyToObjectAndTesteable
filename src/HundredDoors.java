@@ -9,7 +9,7 @@ public class HundredDoors {
     }
 
     public static void hundredDoors(PrintWriter out, int numberOfDoors) {
-        boolean[] doors = new DoorsFlipper(numberOfDoors).invoke();
+        boolean[] doors = new DoorsFlipper(numberOfDoors).flipAll();
 
         printOpened(out, doors);
     }

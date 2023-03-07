@@ -5,7 +5,7 @@ class DoorsFlipper {
         doors = new boolean[numberOfDoors + 1];
     }
 
-    public boolean[] invoke() {
+    public boolean[] flipAll() {
         for (int i = 1; i < doors.length; i++) {
             flipEvery(i);
         }
