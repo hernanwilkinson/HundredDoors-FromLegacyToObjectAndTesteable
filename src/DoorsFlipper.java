@@ -1,11 +1,8 @@
 class DoorsFlipper {
-    private int numberOfDoors;
     private boolean[] doors;
 
     public DoorsFlipper(int numberOfDoors) {
-        this.numberOfDoors = numberOfDoors;
         doors = new boolean[numberOfDoors + 1];
-
     }
 
     public boolean[] invoke() {
