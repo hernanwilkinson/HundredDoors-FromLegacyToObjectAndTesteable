@@ -18,6 +18,6 @@ class DoorsFlipper {
     }
 
     public boolean isClosed(int doorPosition) {
-        throw new RuntimeException();
+        return !doors[doorPosition];
     }
 }
