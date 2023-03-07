@@ -1,12 +1,15 @@
 import java.io.PrintStream;
+import java.io.PrintWriter;
 
 public class HundredDoors {
     // Ejemplo tomado de rosettacode: https://rosettacode.org/wiki/100_doors#With_an_array_of_boolean
     public static void main(String[] args) {
-        hundredDoors(System.out);
+        final PrintWriter out = new PrintWriter(System.out);
+        hundredDoors(out);
+        out.flush();
     }
 
-    private static void hundredDoors(PrintStream out) {
+    private static void hundredDoors(PrintWriter out) {
         boolean[] doors = new boolean[101];
 
         for (int i = 1; i < doors.length; i++) {
