@@ -16,4 +16,8 @@ class DoorsFlipper {
         for (int doorPosition = step; doorPosition < doors.length; doorPosition += step)
             doors[doorPosition] = !doors[doorPosition];
     }
+
+    public boolean isClosed(int doorPosition) {
+        throw new RuntimeException();
+    }
 }

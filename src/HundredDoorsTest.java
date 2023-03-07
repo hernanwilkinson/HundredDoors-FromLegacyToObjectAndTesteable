@@ -2,6 +2,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,5 +22,15 @@ public class HundredDoorsTest {
                 "Door 64 is open.\n" +
                 "Door 81 is open.\n" +
                 "Door 100 is open.\n", out.toString());
+    }
+
+    @Test
+    public void flipsCorrectlyForHundredDoors() {
+        var doorsFlipper = new DoorsFlipper(100);
+        doorsFlipper.flipAll();
+
+        final List<Integer> opened = Arrays.asList(1, 4, 9, 16, 25, 36, 49, 64, 81, 100);
+        for (int doorPosition = 0; doorPosition < 100; doorPosition++)
+            assertEquals(!opened.contains(doorPosition+1),doorsFlipper.isClosed(doorPosition));
     }
 }
