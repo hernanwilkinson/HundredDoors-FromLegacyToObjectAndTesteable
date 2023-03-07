@@ -10,7 +10,7 @@ public class HundredDoors {
     }
 
     public static void hundredDoors(PrintWriter out) {
-        boolean[] doors = new boolean[101];
+        boolean[] doors = new boolean[100+1];
 
         for (int i = 1; i < doors.length; i++) {
             for (int j = i; j < doors.length; j += i) {
