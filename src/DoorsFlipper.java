@@ -7,10 +7,14 @@ class DoorsFlipper {
 
     public boolean[] invoke() {
         for (int i = 1; i < doors.length; i++) {
-            for (int j = i; j < doors.length; j += i) {
-                doors[j] = !doors[j];
-            }
+            flipEvery(i);
         }
         return doors;
+    }
+
+    private void flipEvery(int i) {
+        for (int j = i; j < doors.length; j += i) {
+            doors[j] = !doors[j];
+        }
     }
 }
