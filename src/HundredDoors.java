@@ -9,13 +9,7 @@ public class HundredDoors {
     }
 
     public static void hundredDoors(PrintWriter out, int numberOfDoors) {
-        boolean[] doors = new boolean[numberOfDoors +1];
-
-        for (int i = 1; i < doors.length; i++) {
-            for (int j = i; j < doors.length; j += i) {
-                doors[j] = !doors[j];
-            }
-        }
+        boolean[] doors = new DoorsFlipper(numberOfDoors).invoke();
 
         printOpened(out, doors);
     }
@@ -25,6 +19,25 @@ public class HundredDoors {
             if (doors[i]) {
                 out.printf("Door %d is open.%n", i);
             }
+        }
+    }
+
+    private static class DoorsFlipper {
+        private int numberOfDoors;
+
+        public DoorsFlipper(int numberOfDoors) {
+            this.numberOfDoors = numberOfDoors;
+        }
+
+        public boolean[] invoke() {
+            boolean[] doors = new boolean[numberOfDoors +1];
+
+            for (int i = 1; i < doors.length; i++) {
+                for (int j = i; j < doors.length; j += i) {
+                    doors[j] = !doors[j];
+                }
+            }
+            return doors;
         }
     }
 }
