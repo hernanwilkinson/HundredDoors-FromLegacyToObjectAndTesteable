@@ -9,7 +9,7 @@ public class HundredDoors {
         out.flush();
     }
 
-    private static void hundredDoors(PrintWriter out) {
+    public static void hundredDoors(PrintWriter out) {
         boolean[] doors = new boolean[101];
 
         for (int i = 1; i < doors.length; i++) {
