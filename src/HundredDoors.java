@@ -18,6 +18,10 @@ public class HundredDoors {
             }
         }
 
+        printOpened(out, doors);
+    }
+
+    private static void printOpened(PrintWriter out, boolean[] doors) {
         for (int i = 1; i < doors.length; i++) {
             if (doors[i]) {
                 out.printf("Door %d is open.%n", i);
