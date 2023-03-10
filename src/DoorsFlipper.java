@@ -14,7 +14,11 @@ class DoorsFlipper {
 
     private void flipEvery(int step) {
         for (int doorPosition = step; doorPosition < doors.length; doorPosition += step)
-            doors[doorPosition] = !doors[doorPosition];
+            flipAt(doorPosition);
+    }
+
+    private void flipAt(int doorPosition) {
+        doors[doorPosition] = !doors[doorPosition];
     }
 
     public boolean isClosed(int doorPosition) {
